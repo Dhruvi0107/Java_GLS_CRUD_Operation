@@ -52,12 +52,12 @@ public class login extends HttpServlet {
 			
 			if(rs.next())
 			{
-				String LinkUrl = "<a href='add_book.jsp'>ADD BOOK</a>";
-				String LinkUrl1 = "<a href='show_books'>SHOW ALL THE BOOKS</a>";
+				String LinkUrl = "<a href='add_mobile.jsp'>ADD MOBILE</a>";
+				String LinkUrl1 = "<a href='show_mobiles'>SHOW ALL THE MOBILES</a>";
 				
 				out.println("<h3>Your Login is Succesfully...</h3>");
-				out.println("You Are Show All The Books??"+LinkUrl1+"<br>");
-				out.println("You Are Add The New Book??"+LinkUrl);
+				out.println("You Are Show All The MOBILES??"+LinkUrl1+"<br>");
+				out.println("You Are Add The New MOBILE??"+LinkUrl);
 			}
 			else
 			{

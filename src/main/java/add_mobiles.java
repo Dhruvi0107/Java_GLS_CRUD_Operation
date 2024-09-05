@@ -13,16 +13,16 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
 /**
- * Servlet implementation class add_books
+ * Servlet implementation class add_mobiles
  */
-@WebServlet("/add_books")
-public class add_books extends HttpServlet {
+@WebServlet("/add_mobiles")
+public class add_mobiles extends HttpServlet {
 	private static final long serialVersionUID = 1L;
        
     /**
      * @see HttpServlet#HttpServlet()
      */
-    public add_books() {
+    public add_mobiles() {
         super();
         // TODO Auto-generated constructor stub
     }
@@ -35,28 +35,28 @@ public class add_books extends HttpServlet {
 		response.setContentType("text/html");
 		PrintWriter out = response.getWriter();
 		
-		String Bname = request.getParameter("bname");
-		String Bprice = request.getParameter("bprice");
-		String Bpages = request.getParameter("bpages");
-		String Aname = request.getParameter("aname");
+		String mname = request.getParameter("mname");
+		String mprice = request.getParameter("mprice");
+		String mram = request.getParameter("mram");
+		String mversion = request.getParameter("mversion");
 		
 		try
 		{
 			Class.forName("com.mysql.jdbc.Driver");
 			Connection con = DriverManager.getConnection("jdbc:mysql://localhost:3306/java_clg","root","Deep@1904");
-			PreparedStatement pst = con.prepareStatement("insert into Books (Book_Name,Book_Price,Book_Pages,Author_Name) values (?,?,?,?);");
+			PreparedStatement pst = con.prepareStatement("insert into Mobiles (Mobile_Name,Mobile_Price,Mobile_Ram,Mobile_Version) values (?,?,?,?);");
 
-			pst.setString(1, Bname);
-			pst.setString(2, Bprice);
-			pst.setString(3, Bpages);
-			pst.setString(4, Aname);
+			pst.setString(1, mname);
+			pst.setString(2, mprice);
+			pst.setString(3, mram);
+			pst.setString(4, mversion);
 			
 			pst.executeUpdate();
 			
-			String LinkUrl = "<a href='show_books'>Show All The Books</a>";
+			String LinkUrl = "<a href='show_mobiles'>Show All The Mobiles</a>";
 			
 			out.println("<h3>Book Successfully Added...</h3>");
-			out.println("You Are Show All The Books??"+LinkUrl+"<br>");
+			out.println("You Are Show All The MOBILES??"+LinkUrl+"<br>");
 		}
 		catch(Exception e)
 		{

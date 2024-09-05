@@ -32,36 +32,36 @@ public class details extends HttpServlet {
 		response.setContentType("text/html");
 		PrintWriter out = response.getWriter();
 		
-		String Bid = request.getParameter("Bid");
-		String Bname = request.getParameter("Bname");
-		String Bprice = request.getParameter("Bprice");
-		String Bpages = request.getParameter("Bpages");
-		String Aname = request.getParameter("Aname");
-		String deleteUrl = "delete?Bid="+Bid;
-		String updateUrl = "update?Bid="+Bid+"&Bname="+Bname+"&Bprice="+Bprice+"&Bpages="+Bpages+"&Aname="+Aname;
+		String mid = request.getParameter("mid");
+		String mname = request.getParameter("mname");
+		String mprice = request.getParameter("mprice");
+		String mram = request.getParameter("mram");
+		String mversion = request.getParameter("mversion");
+		String deleteUrl = "delete?mid="+mid;
+		String updateUrl = "update?mid="+mid+"&mname="+mname+"&mprice="+mprice+"&mram="+mram+"&mversion="+mversion;
 		
-		out.println("<h2>BOOK DETAILS</h2>");
+		out.println("<h2>MOBILE DETAILS</h2>");
 		out.println("<table border=3>");
 		out.println("<tr>");
-		out.println("<th>Book ID</th>");
-		out.println("<th>Book Name</th>");
-		out.println("<th>Book Price</th>");
-		out.println("<th>Book Pages</th>");
-		out.println("<th>Author Name</th>");
+		out.println("<th>Mobile ID</th>");
+		out.println("<th>Mobile Name</th>");
+		out.println("<th>Mobile Price</th>");
+		out.println("<th>Mobile Ram</th>");
+		out.println("<th>Mobile Version</th>");
 		out.println("<th>Delete Action</th>");
 		out.println("<th>Update Action</th>");
 		out.println("</tr>");
 		out.println("<tr>");
-		out.println("<td>"+Bid+"</td>");
-		out.println("<td>"+Bname+"</td>");
-		out.println("<td>"+Bprice+"</td>");
-		out.println("<td>"+Bpages+"</td>");
-		out.println("<td>"+Aname+"</td>");
+		out.println("<td>"+mid+"</td>");
+		out.println("<td>"+mname+"</td>");
+		out.println("<td>"+mprice+"</td>");
+		out.println("<td>"+mram+"</td>");
+		out.println("<td>"+mversion+"</td>");
 		out.println("<td>"+"<a href='"+deleteUrl+"'>"+"DELETE"+"</a>"+"</td>");
 		out.println("<td>"+"<a href='"+updateUrl+"'>"+"UPDATE"+"</a>"+"</td>");
 		out.println("</tr>");
 		
-		String LinkUrl1 = "<a href='show_books'>SHOW ALL THE BOOKS</a><br><br>";
+		String LinkUrl1 = "<a href='show_mobiles'>SHOW ALL THE MOBILES</a><br><br>";
 		out.println(LinkUrl1);
 	}
 

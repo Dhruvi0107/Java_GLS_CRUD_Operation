@@ -35,20 +35,20 @@ public class delete extends HttpServlet {
 		response.setContentType("text/html");
 		PrintWriter out = response.getWriter();
 		
-		String Bid = request.getParameter("Bid");
+		String mid = request.getParameter("mid");
 		
 		try
 		{
 			Class.forName("com.mysql.jdbc.Driver");
 			Connection con = DriverManager.getConnection("jdbc:mysql://localhost:3306/java_clg","root","Deep@1904");
-			PreparedStatement pst = con.prepareStatement("delete from Books where Book_ID=?");
+			PreparedStatement pst = con.prepareStatement("delete from Mobiles where Mobile_ID=?");
 			
-			pst.setString(1, Bid);
+			pst.setString(1, mid);
 			
 			pst.executeUpdate();
 			
-			out.println("<h1>Book Deleted Succesfully..!</h1>");
-			out.println("<a href=\"show_books\">SHOW ALL THE BOOKS</a>");
+			out.println("<h1>MOBILE Deleted Succesfully..!</h1>");
+			out.println("<a href=\"show_mobiles\">SHOW ALL THE MOBILES</a>");
 		}
 		catch(Exception e)
 		{
