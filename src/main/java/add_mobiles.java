@@ -43,7 +43,7 @@ public class add_mobiles extends HttpServlet {
 		try
 		{
 			Class.forName("com.mysql.jdbc.Driver");
-			Connection con = DriverManager.getConnection("jdbc:mysql://localhost:3306/java_clg","root","Deep@1904");
+			Connection con = DriverManager.getConnection("jdbc:mysql://localhost:3306/java_clg","root","Dhruvi@0107");
 			PreparedStatement pst = con.prepareStatement("insert into Mobiles (Mobile_Name,Mobile_Price,Mobile_Ram,Mobile_Version) values (?,?,?,?);");
 
 			pst.setString(1, mname);
