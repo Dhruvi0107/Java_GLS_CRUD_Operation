@@ -40,7 +40,7 @@ public class delete extends HttpServlet {
 		try
 		{
 			Class.forName("com.mysql.jdbc.Driver");
-			Connection con = DriverManager.getConnection("jdbc:mysql://localhost:3306/java_clg","root","Deep@1904");
+			Connection con = DriverManager.getConnection("jdbc:mysql://localhost:3306/java_clg","root","Dhruvi@0107");
 			PreparedStatement pst = con.prepareStatement("delete from Mobiles where Mobile_ID=?");
 			
 			pst.setString(1, mid);
