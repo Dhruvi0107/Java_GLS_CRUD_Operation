@@ -39,7 +39,7 @@ public class show_mobiles extends HttpServlet {
 		try
 		{
 			Class.forName("com.mysql.jdbc.Driver");
-			Connection con = DriverManager.getConnection("jdbc:mysql://localhost:3306/java_clg","root","Deep@1904");
+			Connection con = DriverManager.getConnection("jdbc:mysql://localhost:3306/java_clg","root","Dhruvi@0107");
 			PreparedStatement pst = con.prepareStatement("select * from Mobiles;");
 			
 			ResultSet rs = pst.executeQuery();
